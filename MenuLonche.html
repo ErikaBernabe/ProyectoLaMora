@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lonches</title>
+	<link rel="stylesheet" href="Menu.css">
+</head>
+<body>
+	<nav>
+		<ul class="menu-horizontal">
+			<li><img src="IMAGENES/LaMora2.png" alt="" class="logo"></li>
+			<li><a href="LaMora.html">Inicio</a></li>
+			<li>
+				<a href="#">Comida</a>
+				<ul class="menu-vertical">
+					<li><a href="MenuTacos.html">Tacos</a></li>
+					<li><a href="MenuHamburguesas.html">Hamburguesas</a></li>
+					<li><a href="MenuLonche.html">Lonche</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="MenuSodas.html">Sodas</a>
+				<!--<ul class="menu-vertical">
+					<li><a href="#">Coca</a></li>
+					<li><a href="#">Pepsi</a></li>
+				</ul>-->
+			</li>
+			<li><a href="Contacto.html">Contacto</a></li>
+			<li><a href="Sesion.html">Cerrar Sesion</a></li>
+
+		</ul>
+	</nav>
+
+	<!-- Lonches -->
+	<div class="wrapper">
+
+		<div class="card" >
+			<img src="IMAGENES/LoncheChico.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1 class="card-titulo">Lonche Chico</h1>
+				<p class="card-info">Rica Lonche de tamaño chico sencilla</p>
+				<button class="card-button" id="agregar-hambchica">Agregar al carrito</button>
+			</div>
+		</div>
+		
+		<div class="card">
+			<img src="IMAGENES/LoncheMediano.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1 class="card-titulo">Lonche Mediano</h1>
+				<p class="card-info">Rico lonche mediano con salsa de verde</p> 
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+				
+			</div>
+		</div> 
+
+		<div class="card">
+			<img src="IMAGENES/LoncheGrande.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1 class="card-titulo">Lonche Grande</h1>
+				<p class="card-info">Rico Lonche de tamaño Grande con doble Lechuga y Huevo</p>
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+				
+			</div>
+		</div> 
+
+	</div>
+	
+
+	<!-- carrito de compra -->
+	<div class="carrito">
+		<a href="CarritoCompra.html">
+			<img  src="IMAGENES/c2.PNG" alt="HOLA" class="carrito-img">
+		</a>
+	</div>
+
+
+
+
+</body>
+</html>

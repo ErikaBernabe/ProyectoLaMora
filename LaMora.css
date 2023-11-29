@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* CUERPO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+body{
+    /* background-image: url(img/fondo.jpg); */
+    background-size: cover;
+    background:  rgb(161, 161, 226);
+    /* display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; */
+}
+
+#html{
+    margin: auto;
+    padding: 20px;
+    max-width: 900px;
+    background: white;
+}
+/* MENU SUPERIOR*/
+nav{
+    max-width: 900px;
+    margin: auto;
+    background-color: #333;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color: rgb(171, 16, 185);
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: black;
+}
+
+.menu-vertical li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+
+.logo{
+    width: 80px;
+    height: 60px;
+}
+
+/*LaMora*/
+.logoprincipal{
+    display: flex;
+    justify-content: center;
+    margin: 10% 20px;
+}
+
+/*DOMINIC Y YAZ FOR EVER <3*/
+.swiper{
+    width: 1200px;
+    height: 600px;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: #fff;
+    transition: .2s linear;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    transform: scale(1.1);
+}
+
+.swiper-pagination-bullet{
+    border: 2px solid #fff;
+    transition: .2s linear;
+}
+
+.swiper-pagination-bullet:hover, .swiper-pagination-bullet-active{
+    background-color: #fff;
+}

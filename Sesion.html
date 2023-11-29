@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Sesion.css">
+
+</head>
+<body>
+    <div class="formulario">
+        <h1>INICIO DE SESION</h1>
+        <!-- <form method="post"> -->
+        <form orm id="loginForm" onsubmit="return loginUser()">
+            <img class="img-sesion" src="IMAGENES/LaMora2.png" alt="">
+            <div class="usuario">
+                <select name="NUsuarios" id="NUsuarios">
+                    <option value="" disabled selected>Selecciona el usuario</option>
+                    <option value="Empleado">Empleado</option>
+                    <!-- <option value="Administrador">Administrador</option> -->
+                </select>
+                <!-- <label>Tipo de Usuario</label> -->
+            </div>
+
+            <div class="password">
+                <input type="password" id="password" required placeholder="Ingresar contraseña">
+            
+            </div>     
+
+            <input type="submit" value="Iniciar Sesion">
+            
+        </form>
+    </div>
+    <script>
+    function loginUser() {
+            var usuario = document.getElementById('NUsuarios').value;
+            var contraseña = document.getElementById('password').value;
+            
+            //EMPLEADO
+            if ((usuario === 'Empleado' ||usuario === 'Administrador') && contraseña === '1234') {
+                // Redirigir a una página local después de la autenticación
+                window.open('./LaMora.html','_self');
+            } else {
+                alert('Incorrecto. Por favor, inténtalo de nuevo.');
+            }
+            // Evitar que el formulario se envíe de forma predeterminada
+            return false;
+        }
+    </script>
+    
+    
+</body>
+</html>

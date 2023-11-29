@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* CUERPO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+body{
+    /* background-image: url(img/fondo.jpg); */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background: rgb(161, 161, 226);
+}
+
+#html{
+    margin: auto;
+    padding: 20px;
+    max-width: 900px;
+    background: bisque ;
+
+    
+} 
+/* MENU SUPERIOR*/
+nav{
+    max-width: 900px;
+    margin: auto;
+    background-color: #333;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color: rgb(171, 16, 185);
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 99;/*para controlar el orden de apilamiento entre los elementos*/
+    
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: black;
+}
+
+.menu-vertical li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+
+.logo{
+    width: 80px;
+    height: 60px;
+}
+
+/* card hover effect/ efecto de desplazamiento de la tarjeta*/
+/*PARA LAS COMIDAS*/
+.card{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 8px solid  #ffff;
+    position: relative;
+    margin: 70px 10px;
+}
+
+.card-img{
+    width:100% ;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+
+}
+
+.info{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #ffffff16;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    transition: 1s;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover .info{
+    right: 0;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+/*CARRITO DE COMPRA */
+.carrito{
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    position: sticky;
+    bottom: 0;
+}
+.carrito-img{
+    border-radius: 100%;
+    width: 125px;
+
+    transition: transform 0.3s ease;/*PARA HACER UN ZOOM CON EL HOVER*/
+}
+
+.carrito-img:hover{
+    transform: scale(1.1);/*El efecto del zoom*/
+
+}
+
+/*Texto y botones de la Comida*/
+.card-button{
+    color: #1f3d47;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-family:'Ubuntu', sans-seriF;
+    border: none;
+    font-size: 20px;
+    /* width: 150px; */
+    width: 75%;
+    height: 20%;
+}
+
+.card-button:hover{
+    color: white;
+    background: #1f3d47;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-family:'Ubuntu', sans-seriF;
+    border: none;
+    font-size: 20px;
+    /* width: 150px; */
+    width: 75%;
+    height: 20%;
+}
+
+.card-titulo{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.card-info{
+    font-weight: bold;
+}
+
+/*.card-precio{
+    
+}*/
+
+
+
+
+ /* carrito de compras DEL VIDEO */
+.wrapper{
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+header .shopping img{
+    width: 40px;
+}
+header .shopping span{
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+.list .item{
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+}
+.list .item img{
+    width: 90%;
+    height: 430px;
+    object-fit: cover;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    background-color: #1C1F25;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+.carrito{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 500px;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+}
+.active .carrito{
+    left: calc(100% - 500px);
+}
+.active .container{
+    transform: translateX(-200px);
+}
+.carrito h1{
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.carrito .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.carrito .checkOut div{
+    background-color: #E8BC0E;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.carrito .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard li button{
+    background-color: #fff5;
+    border: none;
+}
+.listCard .count{
+    margin: 0 10px;
+} 

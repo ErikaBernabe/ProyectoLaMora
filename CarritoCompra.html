@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito De Compra</title>
+    <link rel="stylesheet" href="CarritoCompra.css">
+	<script src="CarritoCompra.js"></script>
+</head>
+<body>
+    <nav>
+		<ul class="menu-horizontal">
+			<li><img src="IMAGENES/LaMora2.png" alt="" class="logo"></li>
+			<li><a href="LaMora.html">Inicio</a></li>
+			<li>
+				<a href="#">Comida</a>
+				<ul class="menu-vertical">
+					<li><a href="MenuTacos.html">Tacos</a></li>
+					<li><a href="MenuHamburguesas.html">Hamburguesas</a></li>
+					<li><a href="MenuLonche.html">Lonche</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="MenuSodas.html">Sodas</a>
+				<ul class="menu-vertical">
+					<li><a href="#">Coca</a></li>
+					<li><a href="#">Pepsi</a></li>
+				</ul>
+			</li>
+			<li><a href="Contacto.html">Contacto</a></li>
+			<li><a href="Sesion.html">Cerrar Sesion</a></li>
+
+		</ul>
+	</nav>
+
+    CARRITO VENTA 
+
+    <div class="carritoventa">
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="carrito-lista"></ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <p>Dinero recibido: $<input type="number" id="dineroRecibido"></p>
+            <button onclick="calcularCambio()">Calcular Cambio</button>
+            Agrega este botón en la sección del carrito 
+            <button onclick="limpiarCarrito()">Limpiar Carrito</button>
+    
+            <p>Cambio: $<span id="cambio">0.00</span></p>
+        </section>
+    </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="CarritoCompra.css">
+    <script src="CarritoCompra.js" defer></script>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <div id="carrito-lista">
+        <!-- Aquí se mostrarán los elementos del carrito -->
+    </div>
+
+    <div id="total">
+        <strong>Total: </strong><span id="total-precio">$0.00</span>
+    </div>
+
+    <a href="javascript:history.back()">Volver al Menú</a>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tacos</title>
+	<link rel="stylesheet" href="Menu.css">
+</head>
+<body>
+	<nav>
+		<ul class="menu-horizontal">
+			<li><img src="IMAGENES/LaMora2.png" alt="" class="logo"></li>
+			<li><a href="LaMora.html">Inicio</a></li>
+			<li>
+				<a href="#">Comida</a>
+				<ul class="menu-vertical">
+					<li><a href="MenuTacos.html">Tacos</a></li>
+					<li><a href="MenuHamburguesas.html">Hamburguesas</a></li>
+					<li><a href="MenuLonche.html">Lonche</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="MenuSodas.html">Sodas</a>
+				
+			</li>
+			<li><a href="Contacto.html">Contacto</a></li>
+			<li><a href="Sesion.html">Cerrar Sesion</a></li>
+
+		</ul>
+	</nav>
+
+	<!-- CARD-->
+	<div class="wrapper">
+
+		<!-- Tacos Orden 4 Papa-->
+		<div class="card">
+			<img src="IMAGENES/Tacos Papa.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1  class="card-titulo">Orden de 4 Papa</h1>
+				<p class="card-info">Rica orden de 4 tacos de papa</p>
+				<button  class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+
+			</div>
+		</div>
+
+        <!-- Tacos Orden 4 Frijol -->
+		<div class="card">
+			<img src="IMAGENES/Tacos Frijol.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1  class="card-titulo">Orden de 4 Frijol</h1>
+				<p class="card-info">Rica orden de 4 tacos de frijol</p>
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+
+			</div>
+		</div>
+
+		<!-- Tacos Orden 3 Chicharron -->
+		<div class="card">
+			<img src="IMAGENES/Tacos Chicharron.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1  class="card-titulo">Orden de 3 Chicharron</h1>
+				<p class="card-info">Rica orden de 3 tacos de Chicharron</p>
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+
+			</div>
+		</div>
+
+		<!-- Tacos Orden 3 Picadillo -->
+		<div class="card">
+			<img src="IMAGENES/Tacos Picadillo.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1  class="card-titulo">Orden de 3 Picadillo</h1>
+				<p class="card-info">Rica orden de 3 tacos de Picadillo</p>
+
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+
+			</div>
+		</div>
+
+		<!-- Tacos Orden 3 Salchicha -->
+		<div class="card">
+			<img src="IMAGENES/Tacos Salchicha.jpg" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1  class="card-titulo">Orden de 3 Salchicha</h1>
+				<p class="card-info">Rica orden de 3 tacos de Salchicha</p>
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- carrito de compra -->
+	<div class="carrito">
+		<a href="CarritoCompra.html">
+			<img  src="IMAGENES/c2.PNG" alt="HOLA" class="carrito-img">
+		</a>
+	</div>
+
+</body>
+</html>

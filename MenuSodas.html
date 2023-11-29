@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sodas holi</title>
+	<link rel="stylesheet" href="Menu.css">
+</head>
+<body>
+		<!-- MENU PRINCIPAL -->
+	<nav>
+		<ul class="menu-horizontal">
+			<li><img src="IMAGENES/LaMora2.png" alt="" class="logo"></li>
+			<li><a href="LaMora.html">Inicio</a></li>
+			<li>
+				<a href="#">Comida</a>
+				<ul class="menu-vertical">
+					<li><a href="MenuTacos.html">Tacos</a></li>
+					<li><a href="MenuHamburguesas.html">Hamburguesas</a></li>
+					<li><a href="MenuLonche.html">Lonche</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="MenuSodas.html">Sodas</a>
+				
+			</li>
+			<li><a href="Contacto.html">Contacto</a></li>
+			<li><a href="Sesion.html">Cerrar Sesion</a></li>
+		</ul>
+	</nav>
+
+	<!-- CARD-->
+	<div class="wrapper">
+
+		<!-- Cocas-->
+		<div class="card">
+			<img src="IMAGENES/CocaCola.png" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1 class="card-titulo">CocaCola</h1>
+				<p class="card-info">Cocacola de 750ml</p>
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+			</div>
+		</div>
+
+        <!-- Fanta -->
+		<div class="card">
+			<img src="IMAGENES/Fanta.png" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1 class="card-titulo">Fanta</h1>
+				<p class="card-info" >Fanta de 750ml</p>
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+			</div>
+		</div>
+
+		<!-- Manzanita -->
+		<div class="card">
+			<img src="IMAGENES/Manzanita.png" alt="HOLA" class="card-img">
+			<div class="info">
+				<h1 class="card-titulo">Manzanita</h1>
+				<p  class="card-info">Manzanita de 750ml</p>
+				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- carrito de compra -->
+	<div class="carrito">
+		<a href="CarritoCompra.html">
+			<img  src="IMAGENES/c2.PNG" alt="HOLA" class="carrito-img">
+		</a>
+	</div>
+
+</body>
+</html>
