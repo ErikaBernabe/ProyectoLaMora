@@ -57,7 +57,7 @@
 
 
 
-
+/*
 // Código JavaScript para gestionar el carrito de compras
 
 // Array para almacenar los elementos del carrito
@@ -118,9 +118,85 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('carrito', JSON.stringify(carrito));
     };
 });
+*/
 
+document.addEventListener('DOMContentLoaded', function () {
+    let carrito = [];
+    let totalPrecio = 0;
 
+    function agregarAlCarrito(id, nombre, precio) {
+        let producto = {
+            id: id,
+            nombre: nombre,
+            precio: precio
+        };
 
+        carrito.push(producto);
+        console.log('Producto agregado al carrito:', producto);
+        actualizarCarrito();
+    }
 
+    function vaciarCarrito() {
+        carrito = [];
+        actualizarCarrito();
+        localStorage.removeItem('carrito');
+    }
 
+    document.getElementById('vaciar-carrito').addEventListener('click', vaciarCarrito);
 
+    function actualizarCarrito() {
+        let carritoLista = document.getElementById('carrito-lista');
+        let totalElement = document.getElementById('total-precio');
+
+        carritoLista.innerHTML = '';
+
+        totalPrecio = 0;
+
+        carrito.forEach(producto => {
+            let item = document.createElement('div');
+            item.className = 'carrito-item';
+            item.innerHTML = `<span>${producto.nombre}</span><span>${producto.precio}</span>`;
+            carritoLista.appendChild(item);
+
+            totalPrecio += producto.precio;
+        });
+
+        totalElement.textContent = `$${totalPrecio.toFixed(2)}`;
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+
+    function agregarEventoBotonVolver() {
+        let volverMenu = document.getElementById('volver-menu');
+
+        volverMenu.addEventListener('click', function (event) {
+            event.preventDefault();
+            history.back();
+        });
+    }
+
+    function agregarEventoBotones() {
+        let botonesAgregar = document.querySelectorAll('.card-button');
+
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener('click', function () {
+                let id = this.getAttribute('data-id');
+                let nombre = this.getAttribute('data-nombre');
+                let precio = parseFloat(this.getAttribute('data-precio'));
+
+                agregarAlCarrito(id, nombre, precio);
+            });
+        });
+    }
+
+    window.onload = function () {
+        carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        actualizarCarrito();
+        agregarEventoBotones();
+        agregarEventoBotonVolver();
+    };
+
+    window.onbeforeunload = function () {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    };
+});

@@ -17,7 +17,7 @@
                 <select name="NUsuarios" id="NUsuarios">
                     <option value="" disabled selected>Selecciona el usuario</option>
                     <option value="Empleado">Empleado</option>
-                    <!-- <option value="Administrador">Administrador</option> -->
+                    <option value="Administrador">Administrador</option>
                 </select>
                 <!-- <label>Tipo de Usuario</label> -->
             </div>
@@ -36,13 +36,22 @@
             var usuario = document.getElementById('NUsuarios').value;
             var contraseña = document.getElementById('password').value;
             
+             //EMPLEADO
+            
+            
+
+        
             //EMPLEADO
-            if ((usuario === 'Empleado' ||usuario === 'Administrador') && contraseña === '1234') {
-                // Redirigir a una página local después de la autenticación
-                window.open('./LaMora.html','_self');
+            if (usuario === 'Empleado' && contraseña === '1234') {
+                // Redirigir a una página para Empleados
+                window.open('./LaMora.html', '_self');
+            } else if (usuario === 'Administrador' && contraseña === '2627') {
+                // Redirigir a una página para Administradores
+                window.open('Administrador.html', '_self');
             } else {
-                alert('Incorrecto. Por favor, inténtalo de nuevo.');
+                alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
             }
+        
             // Evitar que el formulario se envíe de forma predeterminada
             return false;
         }

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* CUERPO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+body{
+    /* background-image: url(img/fondo.jpg); */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background: rgb(161, 161, 226);
+}
+
+#html{
+    margin: auto;
+    padding: 20px;
+    max-width: 900px;
+    background: bisque ;
+
+    
+} 
+/*Caja Superior Imagen de La Mora*/
+.ContenedorSuperior{
+        display: flex;
+        /* margin: 10px auto 0; Centra horizontalmente y coloca 0px en la parte superior */
+        padding: 20px;
+        justify-content: center;
+}
+

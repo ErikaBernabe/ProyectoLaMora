@@ -81,26 +81,18 @@ nav{
     margin: 10% 20px;
 }
 
-/*DOMINIC Y YAZ FOR EVER <3*/
-.swiper{
-    width: 1200px;
+/* Swipper - aqui no me lo detecta*/
+/* .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-container{
+    width: 100%;
+    height: 100%;
+}
+.swiper-button-next, .swiper-button-prev{
+    color: #000;
+    width: 500px;
     height: 600px;
-}
-
-.swiper-button-prev, .swiper-button-next{
-    color: #fff;
-    transition: .2s linear;
-}
-
-.swiper-button-prev:hover, .swiper-button-next:hover{
-    transform: scale(1.1);
-}
-
-.swiper-pagination-bullet{
-    border: 2px solid #fff;
-    transition: .2s linear;
-}
-
-.swiper-pagination-bullet:hover, .swiper-pagination-bullet-active{
-    background-color: #fff;
-}
+} */

@@ -1,87 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hamburguesas</title>
-	<link rel="stylesheet" href="Menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguesas</title>
+    <link rel="stylesheet" href="Menu.css">
 </head>
 <body>
-	<!-- MENU PRINCIPAL -->
-	<nav>
-		<ul class="menu-horizontal">
-			<li><img src="IMAGENES/LaMora2.png" alt="" class="logo"></li>
-			<li><a href="LaMora.html">Inicio</a></li>
-			<li>
-				<a href="#">Comida</a>
-				<ul class="menu-vertical">
-					<li><a href="MenuTacos.html">Tacos</a></li>
-					<li><a href="MenuHamburguesas.html">Hamburguesas</a></li>
-					<li><a href="MenuLonche.html">Lonche</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="MenuSodas.html">Sodas</a>
-				<!--<ul class="menu-vertical">
-					<li><a href="#">Coca</a></li>
-					<li><a href="#">Pepsi</a></li>
-				</ul>-->
-			</li>
-			<li><a href="Contacto.html">Contacto</a></li>
-			<li><a href="Sesion.html">Cerrar Sesion</a></li>
+    <!-- MENU PRINCIPAL -->
+    <nav>
+        <ul class="menu-horizontal">
+            <li><img src="IMAGENES/LaMora2.png" alt="" class="logo"></li>
+            <li><a href="LaMora.html">Inicio</a></li>
+            <li>
+                <a href="#">Comida</a>
+                <ul class="menu-vertical">
+                    <li><a href="MenuTacos.html">Tacos</a></li>
+                    <li><a href="MenuHamburguesas.html">Hamburguesas</a></li>
+                    <li><a href="MenuLonche.html">Lonche</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="MenuSodas.html">Sodas</a>
+            </li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Sesion.html">Cerrar Sesion</a></li>
+        </ul>
+    </nav>
 
-		</ul>
-	</nav>
+    <!-- CARD-->
+    <div class="wrapper">
+        <!-- Hamburguesa CHICA -->
+        <div class="card">
+            <img src="IMAGENES/HamburguesaChica1.png" alt="HOLA" class="card-img">
+            <div class="info">
+                <h1 class="card-titulo">Hamburguesa Chica</h1>
+                <p class="card-info">Rica Hamburguesa de tamaño chico sencilla</p>
+                <p class="card-precio">$35</p>
+                <button class="card-button" data-id="1" data-nombre="Hamburguesa Chica" data-precio="35">Agregar al carrito</button>
+            </div>
+        </div>
 
-	
-	<!-- CARD-->
-	<div class="wrapper">
-
-		<!-- Hamburguesa CHICA -->
-		<div class="card" >
-			<img src="IMAGENES/HamburguesaChica1.png" alt="HOLA" class="card-img">
-			<div class="info">
-				<h1 class="card-titulo">Hamburguesa Chica</h1>
-				<p class="card-info">Rica Hamburguesa de tamaño chico sencilla </p>
-				<p class="card-precio">$35</p>
-				<button class="card-button" id="agregar-hambchica">Agregar al carrito</button>
-
-			</div>
-		</div>
-		
         <!-- Hamburguesa GRANDE -->
-		<div class="card">
-			<img src="IMAGENES/HamburguesaGrande.PNG" alt="HOLA" class="card-img">
-			<div class="info">
-				<h1 class="card-titulo">Hamburguesa Grande</h1>
-				<p class="card-info">Rica Hamburguesa de tamaño mediano con doble queso</p>
-				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
-				
-			</div>
-		</div> 
+        <div class="card">
+            <img src="IMAGENES/HamburguesaGrande.PNG" alt="HOLA" class="card-img">
+            <div class="info">
+                <h1 class="card-titulo">Hamburguesa Grande</h1>
+                <p class="card-info">Rica Hamburguesa de tamaño mediano con doble queso</p>
+                <button class="card-button" data-id="2" data-nombre="Hamburguesa Grande" data-precio="45">Agregar al carrito</button>
+            </div>
+        </div>
 
-		<!-- Papas -->
-		<div class="card">
-			<img src="IMAGENES/Papas.png" alt="HOLA" class="card-img">
-			<div class="info">
-				<h1 class="card-titulo">Papas</h1>
-				<p class="card-info">Una orden de papas a la francesa</p> 
-				<button class="card-button" onclick="agregarAlCarrito(1, 10.99)">Agregar al carrito</button>
-				
-			</div>
-		</div> 
-	</div>
-	
+        <!-- Papas -->
+        <div class="card">
+            <img src="IMAGENES/Papas1.png" alt="HOLA" class="card-img">
+            <div class="info">
+                <h1 class="card-titulo">Papas</h1>
+                <p class="card-info">Una orden de papas a la francesa</p> 
+                <button class="card-button" data-id="3" data-nombre="Papas" data-precio="15">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
 
-	<!-- carrito de compra -->
-	<div class="carrito">
-		<a href="CarritoCompra.html">
-			<img  src="IMAGENES/c2.PNG" alt="HOLA" class="carrito-img">
-		</a>
-	</div>
+    <!-- carrito de compra -->
+    <div class="carrito">
+        <a href="CarritoCompra.html">
+            <img src="IMAGENES/c2.PNG" alt="HOLA" class="carrito-img">
+        </a>
+    </div>
 
-	<!-- CARRITO DE COMPRAS DEL VIDEO  -->
-	
+    <!-- CARRITO DE COMPRAS DEL VIDEO  -->
     <div class="container">
         <header>
             <h1>Your Shopping Cart</h1>
@@ -91,23 +79,17 @@
             </div>
         </header>
 
-        <div class="list">
-        
-        </div>
+        <div class="list"></div>
     </div>
     <div class="carrito">
         <h1>Card</h1>
-        <ul class="listCard">
-        </ul>
+        <ul class="listCard"></ul>
         <div class="checkOut">
             <div class="total">0</div>
             <div class="closeShopping">Close</div>
         </div>
     </div>
 
-	
-	
-	<script src="CarritoCompra.js"></script>
-
+    <script src="CarritoCompra.js"></script>
 </body>
 </html>

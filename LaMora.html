@@ -1,11 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Menú Desplegable</title>
 	<link rel="stylesheet" href="LaMora.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
+	<!-- Aqui si me lo detecta -->
+	<style>
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			color: #000;
+			width: 500px;
+			height: 950px;
+		}
+		.ImagenGrande {
+			width: 50%;
+			height: 50%;
+			border-radius: 15%;
+		}
+		.ImagenGrande1{
+			width: 50%;
+			height: 50%;
+			border-radius: 15%;
+			margin-top: 50px;
+		}
+		@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
+$primary-color: #1e90ff ;
+$secondary-color: #ffe221;
+$tertiary-color: #ffffff;
+  
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: 'Baloo Paaji', cursive;
+  background: $primary-color;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+  width: 400px;
+  height: 220px;
+  position: relative;
+}
+
+h1, h2{
+  font-size: 75px;
+  text-transform: uppercase;
+  
+  
+  span{
+    width: 100%;
+    float: left;
+    color: $tertiary-color;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function:ease;
+    animation-duration: 3s;
+  }
+}
+h1 span{
+  animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+
+  &:first-child{
+    animation-delay: 0.7s;
+
+  }
+
+  &:last-child{
+    color: $secondary-color;
+    animation-delay: 0.5s;
+  }
+}
+
+h2{ 
+  top: 0;
+  position: absolute;
+  
+  span{
+    animation-delay: 4.1s;
+    -webkit-animation-fill-mode: forwards;
+
+    &:first-child{
+      animation-delay: 4.2s;
+
+    }
+
+    &:last-child{
+      color: $secondary-color;
+      animation-delay: 4s;
+    }
+  }
+}
+
+.usechrome{
+  font-size: 10px;
+  color: #fff;
+  font-family: helvetica, arial;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
+@keyframes titleAnimation {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+       transform: translateY(0);
+       opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+       transform: translateY(50px);
+       opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+      clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+    
+  }
+}
+	</style>
 </head>
+
 <body>
 	<nav>
 		<ul class="menu-horizontal">
@@ -31,42 +180,52 @@
 	<div class="logoprincipal">
 		<img src="IMAGENES/LaMora.png" alt="Holi">
 	</div>
-	
-	<!-- <div class="swiper">
-		<div class="swiper-wraper">
-			<div class="swiper-slide">
-				<img src="IMAGENES/LoncheChico.jpg" alt="">
-			</div>
-			<div class="swiper-slide">
-				<img src="IMAGENES/HamburguesaGrande.PNG" alt="">
-			</div>
-			<div class="swiper-slide">
-				<img src="IMAGENES/Papas.png" alt="">
-			</div>
-			<div class="swiper-slide">
-				<img src="IMAGENES/CocaCola.png" alt="">
-			</div>
-			<div class="swiper-slide">
-				<img src="IMAGENES/HamburguesaChica1.png" alt="">
-			</div>
+
+	<!-- HTML del swiper -->
+	<div class="swiper-container">
+		<section class="container">
+			<h1 class="title">
+			  <span>Hi, nice</span>
+			  <span>to see</span>
+			  <span>you here</span>
+			</h1>
+			
+			<h2 class="title">
+			  <span>This is</span>
+			  <span>a long</span>
+			  <span>sub title</span>
+			  
+			  
+			</h2>
+		  </section>
+		  <span class="usechrome">Use Chrome for a better experience</span>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img class="ImagenGrande" src="IMAGENES/Tacos Chicharron.jpg" alt=""></div>
+			<div class="swiper-slide"><img class="ImagenGrande1" src="IMAGENES/LoncheMediano1.png" alt=""></div>
+			<div class="swiper-slide"><img class="ImagenGrande1" src="IMAGENES/Papas1.png" alt=""></div>
+			<div class="swiper-slide"><img class="ImagenGrande" src="IMAGENES/CocaCola.png" alt=""></div>
+			<div class="swiper-slide"><img class="ImagenGrande1" src="IMAGENES/HamburguesaChica1.png" alt=""></div>
 		</div>
-		<div class="swiper-pagination"></div>
-		<div class="swiper-button-prev"></div>
 		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
 	</div>
-	
+
+	<!-- Scripts del swipper movimiento automatizado -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script>
-		const swiper = new Swiper(".swiper",{
-			navigation:{
-				prevEl:".swiper-button-prev",
-				nextEl:".swiper-button-next"
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
 			},
-			pagination:{
-				el: ".swiper-pagination",
-				clickeable: true
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
-			effect: "coverflow"
 		});
-	</script> -->
+	</script>
 </body>
+
 </html>
